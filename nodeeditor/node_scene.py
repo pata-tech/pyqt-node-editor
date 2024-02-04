@@ -302,7 +302,7 @@ class Scene(Serializable):
         """
         with open(filename, "w") as file:
             file.write( json.dumps( self.serialize(), indent=4 ) )
-            print("saving to", filename, "was successfull.")
+            # print("saving to", filename, "was successfull.")
 
             self.has_been_modified = False
             self.filename = filename
