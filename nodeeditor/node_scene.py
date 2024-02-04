@@ -432,7 +432,7 @@ class Scene(Serializable):
                     break
 
             if not found:
-                new_edge = Edge(self).deserialize(edge_data, hashmap, restore_id, *args, **kwargs)
+                new_edge = self.getEdgeClass()(self).deserialize(edge_data, hashmap, restore_id, *args, **kwargs)
                 # print("New edge for", edge_data)
             else:
                 found.deserialize(edge_data, hashmap, restore_id, *args, **kwargs)
